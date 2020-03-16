@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__UIProgressView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="W7B-IN-KJd">
+                                <rect key="frame" x="100" y="324" width="214" height="112.5"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QdT-TA-JRJ">
+                                        <rect key="frame" x="10" y="0.0" width="194" height="2"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="L9C-xT-nyL"/>
+                                        </constraints>
+                                        <color key="progressTintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Og-GN-NKU">
+                                        <rect key="frame" x="86" y="32" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNS-4Z-tTb">
+                                        <rect key="frame" x="90" y="82.5" width="34" height="30"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="actionstat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3C-8r-3vP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QdT-TA-JRJ" firstAttribute="top" secondItem="W7B-IN-KJd" secondAttribute="top" id="TfG-Gh-vVf"/>
+                                    <constraint firstItem="QdT-TA-JRJ" firstAttribute="leading" secondItem="W7B-IN-KJd" secondAttribute="leading" constant="10" id="Uf1-jo-VlG"/>
+                                    <constraint firstAttribute="trailing" secondItem="QdT-TA-JRJ" secondAttribute="trailing" constant="10" id="jaJ-bp-kph"/>
+                                    <constraint firstAttribute="height" constant="112.5" id="mlQ-LY-JSI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W7B-IN-KJd" secondAttribute="trailing" constant="100" id="Xxc-yh-LmO"/>
+                            <constraint firstItem="W7B-IN-KJd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="jE0-Hc-Isw"/>
+                            <constraint firstItem="W7B-IN-KJd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="n0h-86-Iyy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LabelProgress" destination="3Og-GN-NKU" id="Wyy-Uw-JIL"/>
+                        <outlet property="buttonStart" destination="YNS-4Z-tTb" id="Dd4-uP-N3t"/>
+                        <outlet property="progress" destination="QdT-TA-JRJ" id="ysq-Yt-3Su"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
